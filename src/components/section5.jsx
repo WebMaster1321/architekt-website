@@ -72,7 +72,7 @@ function ServicesSection() {
        "Materialauswahl und Farbberatung",
        "Lichtplanung für perfekte Atmosphäre",
        "Möblierungskonzepte und Einrichtungsberatung",
-       "Akustische Optimierung von Innenräumen",
+      
      ],
    },
    {

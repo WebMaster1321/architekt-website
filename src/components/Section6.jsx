@@ -1,7 +1,9 @@
 "use client"
 import { useEffect, useRef, useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 function Section6() {
+  const navigate = useNavigate()
   const [isVisible, setIsVisible] = useState(false)
   const ref = useRef(null)
 
@@ -33,7 +35,7 @@ function Section6() {
   Wir gestalten moderne, funktionale und ästhetische Räume, die Menschen inspirieren und Ideen Raum geben. 
   Unsere Architektur vereint Kreativität, Präzision und Nachhaltigkeit – für Lebensräume mit Charakter.
 </p>
-        <button className="hero-button6">Jetzt Kontaktieren</button>
+        <button className="hero-button6" onClick={() => navigate("/kontakt")}>Jetzt Kontaktieren</button>
       </div>
     </section>
   )
