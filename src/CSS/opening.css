@@ -1,0 +1,281 @@
+/* OpeningPage.css */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.opening-container {
+  font-family: 'Space Grotesk', sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  overflow: hidden;
+  transition: opacity 1.2s ease, transform 0.8s ease;
+}
+
+.opening-container.fade-out {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+/* Background animated shapes */
+.background-shapes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 2.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.shape.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.shape-1 {
+  width: 300px;
+  height: 300px;
+  top: 15%;
+  left: 10%;
+  border-radius: 40% 60% 70% 30% / 40% 50% 50% 60%;
+  animation: floatingShape 20s infinite alternate ease-in-out;
+}
+
+.shape-2 {
+  width: 200px;
+  height: 200px;
+  top: 60%;
+  left: 15%;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: floatingShape 15s infinite alternate-reverse ease-in-out;
+}
+
+.shape-3 {
+  width: 350px;
+  height: 350px;
+  top: 20%;
+  right: 15%;
+  border-radius: 30% 70% 70% 30% / 50% 40% 60% 50%;
+  animation: floatingShape 18s infinite alternate ease-in-out;
+}
+
+.shape-4 {
+  width: 250px;
+  height: 250px;
+  bottom: 15%;
+  right: 20%;
+  border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%;
+  animation: floatingShape 22s infinite alternate-reverse ease-in-out;
+}
+
+.shape-5 {
+  width: 180px;
+  height: 180px;
+  bottom: 30%;
+  left: 45%;
+  border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+  animation: floatingShape 25s infinite alternate ease-in-out;
+}
+
+.shape-6 {
+  width: 120px;
+  height: 120px;
+  top: 40%;
+  left: 25%;
+  border-radius: 50% 50% 50% 50% / 60% 40% 60% 40%;
+  animation: floatingShape 17s infinite alternate-reverse ease-in-out;
+}
+
+@keyframes floatingShape {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(20px, 20px) rotate(5deg);
+  }
+  100% {
+    transform: translate(-20px, -10px) rotate(-5deg);
+  }
+}
+
+/* Central content */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 700px;
+  padding: 0 20px;
+  z-index: 10;
+}
+
+/* Animated line */
+.animated-line {
+  width: 1px;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 40px;
+  transition: height 1.5s cubic-bezier(0.25, 1, 0.5, 1) 0.3s;
+}
+
+.animated-line.active {
+  height: 60px;
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.8s ease, transform 1.8s ease;
+}
+
+.logo-container.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.logo-symbol {
+  font-size: 36px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+/* Tagline */
+.tagline {
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.tagline.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Description */
+.description {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 40px;
+  max-width: 560px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.description.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Button */
+.enter-button {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s, transform 0.3s, border-color 0.3s;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease, transform 1.5s ease, background-color 0.3s, border-color 0.3s;
+}
+
+.enter-button.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.enter-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.button-arrow {
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.enter-button:hover .button-arrow {
+  transform: translateX(5px);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .logo-text {
+    font-size: 32px;
+  }
+  
+  .tagline {
+    font-size: 18px;
+  }
+  
+  .description {
+    font-size: 14px;
+  }
+  
+  .shape-1, .shape-3 {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .shape-2, .shape-4 {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-symbol {
+    font-size: 28px;
+  }
+  
+  .logo-text {
+    font-size: 28px;
+  }
+  
+  .enter-button {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}

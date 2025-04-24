@@ -1,0 +1,88 @@
+/* MobileFirstSection.css */
+.mobile-first-section {
+    padding: 0px 20px;
+    background-color: #ffffff;
+    overflow: hidden;
+  }
+  
+  .section-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .container {
+    display: flex;
+    justify-content: center;  /* horizontal zentrieren */
+    align-items: center;      /* vertikal zentrieren (falls nötig) */
+  }
+  
+  .title {
+    font-size: clamp(40px, 10vw, 100px); /* responsiv! */
+    color: #202020;
+    text-align: center;
+    transform: rotate(-4deg) scaleX(1.5); /* schief und in die Länge gezogen */
+  }
+  
+  
+  
+  
+  .speech-bubble {
+    background-color: #173c81;
+    color: white;
+    border-radius: 24px;
+    padding: 16px 24px;
+    max-width: 380px;
+    position: relative;
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition-delay: 0.2s;
+  }
+  
+  .speech-bubble p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  
+  .speech-bubble.top {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  
+  .speech-bubble.bottom {
+    margin-left: 20px;
+    margin-right: auto;
+    transition-delay: 0.4s;
+  }
+  
+  /* Animation when element becomes visible */
+  .mobile-first-section.visible .title,
+  .mobile-first-section.visible .speech-bubble {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 32px;
+    }
+    
+    .speech-bubble {
+      max-width: 300px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 28px;
+    }
+    
+    .speech-bubble {
+      max-width: 260px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }

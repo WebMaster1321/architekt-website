@@ -1,0 +1,190 @@
+
+   .footer {
+    padding: 0 55px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #000;
+    position: relative;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  .footer-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+   .divider {
+    height: 1px;
+    background-color: #e0e0e0;
+    width: 100%;
+    margin-bottom: 30px;
+   }
+   .footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 60px;
+   }
+   .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    cursor: pointer;
+   }
+   .nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    transition: opacity 0.2s;
+   }
+   .nav-links a:hover {
+    opacity: 0.7;
+   }
+   .center-content {
+    text-align: center;
+    max-width: 500px;
+   }
+   .logo {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   .logo-icon {
+    font-weight: bold;
+    margin-right: 2px;
+   }
+   .tagline {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 20px;
+   }
+   .cta-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+   }
+   .cta-button:hover {
+    background-color: #333;
+   }
+   .contact-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+   }
+   .contact-button:hover {
+    background-color: #333;
+   }
+   .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+   }
+   .footer-bottom-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+   }
+   .scroll-top {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+   }
+   .scroll-top:hover {
+    background-color: #333;
+   }
+   .arrow-up {
+    font-size: 18px;
+   }
+   .copyright {
+    font-size: 14px;
+    color: #555;
+   }
+   .footer-bottom-center a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    transition: color 0.2s;
+   }
+   .footer-bottom-center a:hover {
+    color: #000;
+   }
+   .footer-bottom-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+   }
+   .footer-bottom-right a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    transition: color 0.2s;
+   }
+   .footer-bottom-right a:hover {
+    color: #000;
+   }
+   .separator {
+    color: #555;
+    font-size: 12px;
+   }
+   .credit {
+    font-size: 14px;
+    color: #555;
+    margin-left: 20px;
+   }
+   .large-logo {
+    font-size: 120px;
+    font-weight: 900;
+    letter-spacing: -2px;
+    margin-bottom: 50px;
+   }
+   @media (max-width: 768px) {
+    .footer {
+      padding: 0 20px;
+    }
+    .footer-main {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+    .nav-links {
+      align-items: center;
+    }
+    .footer-bottom {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .footer-bottom-left,
+    .footer-bottom-right {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+    .large-logo {
+      font-size: 60px;
+      text-align: center;
+    }
+   }

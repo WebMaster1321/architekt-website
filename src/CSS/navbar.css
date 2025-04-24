@@ -1,0 +1,94 @@
+/* Burger Menu Navbar Styling */
+.burger-navbar {
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Logo Styling */
+.logo {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+/* Burger Button Styling */
+.burger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  width: 40px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 3;
+  position: relative;
+}
+
+.bar {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+/* Burger Animation */
+.burger.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+
+.burger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* Dropdown Menu Styling */
+.menu-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 1.5rem;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  min-width: 150px;
+  z-index: 2;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.menu-item {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 0.8rem;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
+.menu-item:hover {
+  background-color: #f8f8f8;
+  color: #555;
+}
