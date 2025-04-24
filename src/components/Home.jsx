@@ -46,7 +46,7 @@ const Home = () => {
 
           <div className={`dashboard-container ${dashboardVisible ? 'dashboard-visible' : ''}`}>
             <img 
-              src="Bild.png" 
+              src="/architekt-website/Bild.png" 
               alt="AlphaLedger Dashboard" 
               className="dashboard-image" 
             />

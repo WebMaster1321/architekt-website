@@ -69,7 +69,7 @@ const ÜberUns = () => {
 </div>
 <div className="intro-image7">
 <div className="image-container7">
-<img src="/laptop.png" alt="Modernes Architekturprojekt" />
+<img src="/architekt-website/laptop.png" alt="Modernes Architekturprojekt" />
 </div>
 </div>
 </div>

@@ -149,9 +149,9 @@ export default function Section3() {
         <div className="flex-container">
           <p className="product-text">Projekte</p>
           <div className="image-gallery">
-            <img src="/Bild2.png" alt="Bild 1" />
-            <img src="/Bild4.png" alt="Bild 2" />
-            <img src="/Bild3.png" alt="Bild 3" />
+            <img src="/architekt-website/Bild2.png" alt="Bild 1" />
+            <img src="/architekt-website/Bild4.png" alt="Bild 2" />
+            <img src="/architekt-website/Bild3.png" alt="Bild 3" />
           </div>
         </div>
       </div>
